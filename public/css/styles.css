@@ -1,0 +1,415 @@
+*{margin: 0;
+ box-sizing: border-box;}
+
+body {
+    font-family: 'Montserrat';
+    background-color: #333333;
+    overflow: hidden;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  html{
+     scroll-behavior:smooth;
+     overflow-x: hidden;
+  }
+
+/*Preload*/
+.spinner{
+    width: 80px;
+    height: 80px;
+    border-top:4px solid #ed5565;
+    border-right:3px solid #252627;
+    border-right:3px solid #333333;
+    border-right:3px solid #888888;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+    animation: spin 0.7s infinite linear;
+}
+@keyframes spin {
+        from{transform: rotate(0deg);}
+        to{transform: rotate(360deg);}
+}
+#preload{
+  height:100%;
+  width:100%;
+  background:#333333;
+  position:fixed;
+  left:0;
+  top:0;
+ }
+#preload .landingText p{
+color: #bebebe;
+width: 80px;
+height: 80px;
+position: absolute;
+top:200px;
+bottom:0;
+left:0;
+right: 0;
+margin: auto;
+}
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat-bold', sans-serif;
+  }
+  /*
+ ==============
+    Title
+ ==============
+ */
+#title {
+    color: #fff;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+
+  .container-fluid {
+    padding: 3% 15% 7%;
+  }
+  /*
+ ==============
+    navbar
+ ==============
+ */
+  .navbar {
+    padding-bottom: 4.5rem;
+  }
+  .navbar-brand a img{border-radius: 50%;}
+
+  .navbar-brand {
+    font-family: "Ubuntu";
+    /*font-weight: bold;*/
+    font-size: 1.5rem;
+  }
+  .navbar-toggler {
+    margin-right: 20px;
+    padding: 0;
+    border: 0;
+  }
+  .navbar .navbar-item {
+    padding: 0 18px;
+  }
+  .navbar .nav-link{
+    text-align: center;
+  }
+  /* Download button */
+  .Download-button {
+    margin: 5% 3% 5% 0;
+  }
+  /*
+ ==============
+    itle-imagte
+ ==============
+ */
+  .title-image {
+    width: 60%;
+    border-radius:50%;
+    position: absolute;
+    right: 20%;
+    background-color:#ed5565;
+   }
+
+  /* .... */
+  .text h1{
+    color: aliceblue;
+    cursor: context-menu;
+    }
+  .text p{
+    letter-spacing: 5px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .text h1 span{
+    color: #ed5565;
+    font-family: "Ubuntu";
+    text-shadow: 0px 1px 3px black;
+}
+  /*
+ ============== ============== ============== ==============
+                        about
+ ============== ============== ============== ==============
+ */
+  #about{
+    height: 20% ;
+    margin-top:3rem;
+  }
+  .about h1,
+.skills h1,
+.work h1{
+  font-size: 10rem;
+  opacity: .5;
+  z-index: 0;
+  color: #707070;
+}
+.skills-info,
+.about-info{
+  padding: 50px;
+  background-color: #252627;
+  opacity: 0.6;
+  box-shadow: 0 0 1.2rem rgb(8, 7, 7);
+ max-width: 900px;
+  position: relative;
+  top:-6rem;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.skills-info p,
+.about-info p{
+  font-size: 1.3rem;
+  color: #bebebe;
+  text-indent: 10%;
+  line-height: 2rem;
+  font-family:Arial, Helvetica, sans-serif;}
+.about-info p:nth-child(2),
+.about-info p:last-child{
+  margin-top: 1rem;
+}
+.skills-info li{
+   font-size: 1.3rem;
+  color: #bebebe;
+font-family:Arial, Helvetica, sans-serif;
+line-height: 2rem;
+}
+.skills h1,
+.contact h1{
+  font-size: 10rem;
+ text-align: right;
+  opacity: .5;
+}
+.skills-info ul {
+  padding-left: 10px;
+}
+
+.all-cards{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.sm-card{
+  background-image: linear-gradient(#bbbbbb, #888888 );
+    border-radius:30px;
+    margin:10px;
+    width:130px;
+    height:90px;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+    box-shadow: 0 0 1.2rem rgb(8, 7, 7);
+}
+.sm-card:hover{
+    transform: scale(1.05,1.05);
+}
+.sm-card   p{
+  color: #333333;
+   font-family: "Ubuntu";
+   font-size: 1.4rem
+ }
+/*
+ ============== ============== ============== ============== ======
+    projects
+ ============== ============== ============== ============== ======
+ */
+#projects {
+  padding: 100px;
+  text-align: center;
+}
+#projects h3,.form-signin{color:#bebebe;}
+#projects p{color: #111;}
+.projects-columnn {
+  padding: 3% 2%;
+}
+.card{
+    opacity: .8;
+    box-shadow: 2px 3px 5px 3px rgba(0,0,0,0.5);
+    }
+.card:hover{
+  box-shadow: 5px 15px 25px  rgba(0,0,0,0.7);
+  transition: 0.1s ;
+  transform:scale(1.03,1.03);
+}
+#projects .project-icon{
+  height: 30px;
+  width: 30px;
+  margin: 2% 2%;
+}
+.github-icon {
+  height: 30px;
+  width: 30px;
+  margin: 2% 2%;
+  border-radius: 50%;
+}
+.github-icon:hover{
+  transform: scale(1.1,1.1);
+opacity: .7;
+}
+/************  Home target */
+
+.lifter{
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  right:5%;
+  bottom: 5%;
+  color: #ed5565;
+  z-index: 100;
+  opacity: 0.5;
+  border-radius: 50%;
+  box-shadow: 3px 3px 2px #111;
+}
+.lifter:hover{opacity: 1;
+              transform: scale(1.1,1.1);
+}
+
+
+/*
+ ============== ============== ============== ============== ==========
+                     Newsletter form
+ ============== ============== ============== ============== ==========
+ */
+.form-signin {
+  width: 500px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.firstname,.lastname,.email{
+  background-color: #333333 !important;
+  color:#bbbbbb !important;
+  border-color: #707070;
+}
+.form-signin .btn{
+  background-color: #252627;
+
+}
+.form-signin .btn:hover{
+  background-color: #252627;
+  color:#e4e3e3;
+
+}
+.firstname {
+  margin-bottom:-2px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.lastname {
+  margin-bottom: -1px;
+  border-radius: 0;
+}
+.email {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/*
+ ============== ============== ============== ============== ==========
+                     footer
+ ============== ============== ============== ============== ==========
+ */
+#footer {
+  width: 100%;
+  padding: 7% 15%;
+  text-align: center;
+  box-shadow:  3px 0px 10px #252627;
+  background-color: #252627;
+}
+
+#footer p{color:#bebebe;}
+#footer h6{color:#888888;
+            font-size: 0.6rem;}
+#footer a{color: #ed5565;
+          text-decoration: underline;}
+#footer a:hover{
+  text-decoration: none;
+  color: cyan;
+}
+.social-icon {
+  height: 30px;
+  width: 30px;
+  margin: 2% 2%;
+  opacity: 0.8;
+  background: transparent;
+  border-radius:5px;
+}
+.social-icon:hover{
+  opacity: 1;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ transition: .2s;
+ transform: scale(0.9,0.9);
+}
+
+/*footer social icons grid*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  width: 16%;
+  padding: 10px;
+}
+
+
+/*
+ ==============
+ media queries
+ ==============
+ */
+@media (max-width:599px){
+  body{margin: 0;}
+  .about h1, .skills h1, .work h1 {
+      font-size: 5rem;}
+#about{margin-top:10%;}
+  .skills-info, .about-info {
+    padding: 20px;
+    top: -3.5rem;}
+.text h1 span{font-size: 2.5rem;
+            font-family: "Ubuntu";}
+.container-fluid{padding: 0 20px 10px 20px; }
+.navbar{  padding: 0 0 50px 0;}
+.title-image{top: 0;}
+.titlePage{display: flex;
+            flex-direction: column-reverse;}
+.titlePage .profile-image{height: 250px;}
+.text h1{font-size: 2rem;}
+#projects{margin:10px 10% 20px 10%;
+          padding:0}
+#projects .card{width:100;}
+.form-signin{width:90%;}
+}
+@media (min-width:600px){
+  .text h1 span{font-family: "Ubuntu";}
+  .titlePage .profile-image{height: 200px;}
+}
+@media (min-width:900px){.text h1 span{font-family: "Ubuntu";}}
+@media (min-width:1200px){.text h1 span{font-family: "Ubuntu";}}
+@media (min-width:1800px){.text h1 span{font-family: "Ubuntu";}}
+
+/*
+ ============== ============== ============== ============== ==========
+                    Failure.html
+ ============== ============== ============== ============== ==========
+ */
+ #fail{
+   margin: 20% 10%;
+ }

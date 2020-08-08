@@ -45,7 +45,7 @@ const data = {
 const postData = JSON.stringify(data);
 
 const options = {
-  url : API_URL,
+  url : process.env.API_URL,
   method : "POST",
   headers:{
   Authorization : process.env.API_KEY
@@ -65,11 +65,12 @@ request(options, (err, response, body) => {
     }
   }
  });
+
 });
 
 app.post("/failure.html", function(req,res){
   res.redirect("/index.html");
-})
+});
 
 
 
